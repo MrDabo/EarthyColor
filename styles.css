@@ -1,0 +1,392 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --backgroundColor: rgb(251, 243, 225);
+    --purpleColor: rgb(151, 129, 239);
+    --grayColor: rgb(128, 121, 130);
+    --darckBlueColor: rgb(5, 16, 35);
+    --lightGreenColor: rgb(157, 209, 188);
+    --lightRedColor: rgb(243, 148, 126);
+    --skyBlueColor: rgb(75, 131, 249);
+    --lightYellowColor: rgb(250, 202, 82);
+    --greenColor: rgb(67, 185, 127);
+    --purpleColor: rgb(160, 129, 249);
+    --blackColor: rgb(3, 0, 1);
+    --lightBlueColor: rgb(125, 207, 252);
+    --cardGreenColor: rgb(187, 237, 200);
+    --cardPinkColor: rgb(247, 206, 220);
+    --cardPurpleColor: rgb(180, 175, 251);
+
+
+    
+}
+body{
+    background-color: var(--backgroundColor, lightgoldenrodyellow);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    margin: 0px 150px;
+    padding: 20px 0px;
+}
+.logo{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+.logo .logo-abbriviation{
+    font-size: 100px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color: black;
+}
+.logo .logo-abbriviation span{
+    color: var(--purpleColor, purple);
+}
+.logo .logo-text{
+    font-family: sans-serif;
+    margin-top: 15px;
+    font-size: 20px;
+    color: var(--grayColor, gray);
+}
+.logo .logo-text span{
+    font-weight: bold;
+}
+nav{
+    margin-left: 400px;
+}
+nav ol{
+    list-style-type: none;
+    display: flex;
+}
+nav ol li{
+    margin-left: 45px;
+}
+nav ol li a{
+    text-decoration: none;
+    color: var(--grayColor,gray);
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    font-weight: 500;
+}
+nav ol li a:hover{
+    font-weight: bold;
+    color: black;
+}
+.header-link{
+    text-decoration: none;
+    background-color: var(--darckBlueColor, darkblue);
+    color: aliceblue;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    font-family: sans-serif;
+
+}
+div.burger-menu{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+}
+div.burger-menu > div{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+}
+div.burger-menu::after{
+    content: "  ";
+    width: 25px;
+    height: 4px;
+    border-radius: 20px;
+    background-color: black;
+}
+div.burger-menu::before{
+    content: " ";
+    width: 40px;
+    height: 4px;
+    border-radius: 20px;
+    background-color: black;
+}
+aside{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: green;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+aside nav ol{
+    display: flex;
+    flex-direction: column;
+}
+aside nav ol li a{
+    font-size: 30px;
+}
+main{
+    display: flex;
+    margin: 0px 150px;
+    justify-content: space-between;
+    padding: 30px 0px 0px 0px;
+    margin-bottom: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main-intro-section{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+.main-intro-section h1{
+    font-family: sans-serif;
+    font-size: 100px;
+    width: 700px;
+}
+.main-intro-section p{
+    margin-top: 40px;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+.main-intro-section .info{
+   margin-top: 10px;
+   display: flex;
+   width: 400px;
+   justify-content: space-between;
+   align-items: center;
+}
+.main-intro-section .info a{
+    text-decoration: none;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 169px;
+    height: 50px;
+    transition: 1s;
+}
+.main-intro-section .info a:hover{
+    
+    box-shadow:10px 7px rgb(255, 217, 19);
+}
+.main-intro-section .info .play-btn{
+    font-size: 20px;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 45px;
+}
+.main-intro-section .info .play-btn:active{
+    background-color: rgb(214, 209, 209);
+}
+.main-intro-section .info a{
+    font-family: sans-serif;
+}
+.main-intro-section .info p{
+    font-family: sans-serif;
+    margin-bottom: 38px;
+}
+.slider{
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    gap: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.slider-inner{
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+    width: fit-content;
+    animation: scroll 20s linear infinite;
+}
+.slider-inner.slider-inner-two{
+    animation-direction: reverse;
+}
+.slider-inner li{
+    color: aliceblue;
+    font-family: sans-serif;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-size: 25px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+}
+.slider-inner li.li-one{
+    background-color: var(--lightGreenColor);
+}
+.slider-inner li.li-two{
+    background-color: var(--lightRedColor);
+}
+.slider-inner li.li-three{
+    background-color: var(--skyBlueColor);
+}
+.slider-inner li.li-four{
+    background-color: var(--lightYellowColor);
+}
+.slider-inner li.li-five{
+    background-color: var(--greenColor);
+}
+.slider-inner li.li-six{
+    background-color: var(--lightBlueColor);
+}
+.slider-inner li.li-seven{
+    background-color: var(--purpleColor);
+}
+.cards-section{
+    display: flex;
+    margin: 50px 150px 0px 150px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cards-section .card{
+    border: 2px solid black;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: sans-serif;
+    padding: 0px 20px;
+    width: 450px;
+}
+.cards-section .card:first-child{
+    background-color: var(--cardGreenColor);
+    margin-bottom: 20px;
+}
+.cards-section .card:nth-child(2){
+    background-color: var(--cardPinkColor);
+    box-shadow: black 0px 0px 0px 1px inset, var(--cardPinkColor) -9px -9px 0px -2px, black -10px -10px;
+    margin-bottom: 20px;
+}
+.cards-section .card:last-child{
+    background-color: var(--cardPurpleColor);
+    margin-bottom: 20px;
+}
+.cards-section .card p{
+    width:300px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.cards-section .card h2{
+    margin-bottom: 20px ;
+}
+::-webkit-scrollbar{
+    width: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: black;
+    border: 5px solid var(--backgroundColor);
+    border-radius: 20px;
+}
+::-webkit-scrollbar-button{
+}
+@keyframes scroll {
+    to{
+        transform: translate(-44%);
+    }
+}
+@media screen and (max-width:600px){
+    nav{
+        display: none;
+    }
+    .header-link{
+        display: none;
+    }
+    header{
+        width: 135vw;
+        margin: 0px 50px;
+        padding: 20px 0px;
+    }
+    main{
+        width: 135vw;
+        margin: 0px 50px;
+    }
+    .main-intro-section{
+        width: 135vw;
+        align-items: center;  
+    }
+    .main-intro-section h1{
+        font-size: 50px;
+        width: 400px;
+        text-align: center;
+    }
+    .main-intro-section p{
+        width: 500px;
+        text-align: center;
+    }
+    .main-intro-section .info{
+        margin-top: 10px;
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+     main .main-image-section{
+        width: 135vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .slider{
+        min-width: 165vw;
+    }
+     .slider-inner li{
+        padding: 10px 15px;
+        border-radius: 40px;
+        font-size: 17px;
+    }
+    .cards-section{
+        width: 135vw;
+        margin: 20px 50px 0px 50px;
+    }
+    .cards-section .card{
+        width: 135vw;
+    }
+    .cards-section .card p{
+        width: 1000px;
+    }
+    .cards-section .card:nth-child(2){
+        background-color: var(--cardPinkColor);
+        box-shadow: black 0px 0px 0px 1px inset, var(--cardPinkColor) -9px -9px 0px -1px, black -10px -10px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    .cards-section .card:last-child{
+        margin-bottom: 5px;
+    }
+}
+
+
+
+
+
+
